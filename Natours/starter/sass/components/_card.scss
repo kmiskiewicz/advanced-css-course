@@ -1,13 +1,13 @@
 .card {
     perspective: 150rem;
     position: relative;
-    height: 52rem;
+    height: 54rem;
     &__side {
         position: absolute;
         top: 0;
         left: 0;
         transition: all .8s ease;
-        height: 52rem;
+        height: 54rem;
         width: 100%;
         font-size: 2rem;
         backface-visibility: hidden;
@@ -21,8 +21,14 @@
         &--back {
             background-color: $color-white;
             transform: rotateY(180deg);
-            &-1 {
+            &--1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            &--2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            &--3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
     }
@@ -36,15 +42,17 @@
         background-size: cover;
         background-blend-mode: screen;
         height: 23rem;
+        border-top-left-radius: 3px; //hack for Chrome, overflow hidden on parent should be enough
+        border-top-right-radius: 3px; //hack for Chrome, overflow hidden on parent should be enough 
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url("../img/nat-5.jpg");
         }
         &--2 {
-            background-image: url("../img/nat-5.jpg");
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url("../img/nat-6.jpg");
         }
         &--3 {
-            background-image: url("../img/nat-5.jpg");
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url("../img/nat-7.jpg");
         }
     }
     &__heading {
@@ -54,7 +62,7 @@
         color: $color-white;
         position: absolute;
         top: 12rem;
-        text-align: right;
+        text-align: right; 
         right: 2rem;
         width: 75%;
     }
@@ -65,7 +73,13 @@
         &--1 {
             background-image: linear-gradient( to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85))
         }
-    }
+        &--2 {
+            background-image: linear-gradient( to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85))
+        }
+        &--3 {
+            background-image: linear-gradient( to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85))
+        } 
+    } 
     &__details {
         padding: 3rem;
         ul {
@@ -81,5 +95,23 @@
                 }
             }
         }
+    }
+    &__cta {
+        @include positioning-in-the-middle;
+        width: 90%;
+        text-align: center;
+    }
+    &__price-box {
+        text-align: center;
+        margin-bottom: 8rem;
+        color: $color-white;
+    }
+    &__price_only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
