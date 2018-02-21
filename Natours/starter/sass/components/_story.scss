@@ -24,6 +24,9 @@
     }
     &__img {
         height: 100%; //hack to fill the container
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden; //hack for shaking at the end of transition 
+        transition: all .5s;
     }
     &__caption {
         position: absolute;
@@ -41,5 +44,10 @@
     &:hover &__caption {
         opacity: 1;
         transform: translate(-50%, -50%);
+    }
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+        backface-visibility: hidden; //hack for shaking at the end of transition 
     }
 }
