@@ -14,15 +14,32 @@
     &__shape {
         width: 15rem;
         height: 15rem;
+        position: relative;
         float: left; //has to be float, and width and height defined
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        transform:  skewX(12deg) translateX(-3rem);
+        transform: skewX(12deg) translateX(-3rem);
     }
     &__img {
         height: 100%; //hack to fill the container
     }
-   
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden; //hack for shaking at the end of transition 
+    }
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
