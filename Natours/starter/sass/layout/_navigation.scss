@@ -11,6 +11,8 @@
         right: 6rem;
         border-radius: 50%;
         z-index: 2000;
+        text-align: center;
+        cursor: pointer;
     }
     &__background {
         height: 6rem;
@@ -69,12 +71,58 @@
             color: $color-primary;
             transform: translateX(1rem);
         }
-    }
+    } //functionality
     &__checkbox:checked~&__background {
         transform: scale(80);
     }
     &__checkbox:checked~&__nav {
         opacity: 1;
         width: 100%;
+    } //icon
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all .2s;
+        }
+        &::before {
+            top: -.8rem;
+        }
+        &::after {
+            top: .8rem;
+        }
+    }
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+    &__checkbox:checked+&__button &__icon {
+        //when checkbox is checked, select it's next sibling and then select child of the sibling
+        background-color: transparent;
+    }
+    &__checkbox:checked+&__button &__icon::after {
+        top:0;
+        //when checkbox is checked, select it's next sibling and then select child of the sibling
+       transform: rotate(135deg);
+    }
+    &__checkbox:checked+&__button &__icon::before {
+        //when checkbox is checked, select it's next sibling and then select child of the sibling
+        top:0;
+        transform: rotate(-135deg);
     }
 }
