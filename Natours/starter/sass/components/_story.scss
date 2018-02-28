@@ -8,8 +8,20 @@
     padding-left: 9rem; //6+3
     font-size: $default-font-size;
     transform: skewX(-12deg);
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;  
+    }
+    @include respond(phone) {
+        transform: skewX(0);
+    }
     &>* {
         transform: skewX(12deg);
+        @include respond(phone) {
+            transform: skewX(0);
+        }
+   
     }
     &__shape {
         width: 15rem;
@@ -19,9 +31,13 @@
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%); 
+        clip-path: circle(50% at 50% 50%);
         transform: skewX(12deg) translateX(-3rem);
+        @include respond(phone) {
+            transform: skewX(0) translateX(-3rem);
+        }
     }
+ 
     &__img {
         height: 100%; //hack to fill the container
         transform: translateX(-4rem) scale(1.4);
@@ -50,4 +66,4 @@
         filter: blur(3px) brightness(80%);
         backface-visibility: hidden; //hack for shaking at the end of transition 
     }
-} 
+}
