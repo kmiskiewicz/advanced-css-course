@@ -8,7 +8,7 @@
         clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
         height: 95vh;
     }
-    @media (min-resolution: 192dpi) and (min-width:37.5em), //for everything different than safari
+    @media  only screen and (min-resolution: 192dpi) and (min-width:37.5em), //for everything different than safari
     (-webkit-min-device-pixel-ratio: 2) and (min-width:37.5em), //hack for safari
     (min-width:125em) {
         //600px/16 ==37.5em  2000/16 =125em
