@@ -1,9 +1,8 @@
 .popup {
-    width: 80%;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: rgba($color-black, .8);
     z-index: 3001;
@@ -30,6 +29,9 @@
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
         opacity: 0;
+        @include respond(tab-port) {
+            width: 90vw;
+        }
     }
     &__left {
         width: 33.3%;
@@ -45,14 +47,18 @@
         padding: 3rem 5rem;
         @include respond(tab-port) {
             position: relative;
+            padding: 3rem 2rem;
             padding-bottom: 8rem;
-            
+
         }
         & a.btn,
         & a.btn:hover {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, -10%);
+            @include respond(tab-port) {
+                position: absolute;
+                left: 50%;
+                padding: 1.4rem 2rem;
+                transform: translate(-50%, -10%);
+            }
         }
     }
     &__img {
@@ -63,6 +69,9 @@
         font-size: 1.4rem;
         margin-bottom: 4rem;
         column-count: 2;
+        @include respond(tab-port) {
+            column-count: 1;
+        }
         column-gap: 4rem; //1em ==14px 
         column-rule: 1px solid $color-grey-light-2;
         hyphens: auto;
