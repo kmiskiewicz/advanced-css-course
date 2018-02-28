@@ -34,12 +34,26 @@
     &__left {
         width: 33.3%;
         display: table-cell;
+        @include respond(tab-port) {
+            display: none;
+        }
     }
     &__right {
         width: 66.7%;
         display: table-cell; // float: left;
         vertical-align: middle;
         padding: 3rem 5rem;
+        @include respond(tab-port) {
+            position: relative;
+            padding-bottom: 8rem;
+            
+        }
+        & a.btn,
+        & a.btn:hover {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -10%);
+        }
     }
     &__img {
         display: block;

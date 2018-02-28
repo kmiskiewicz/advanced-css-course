@@ -658,11 +658,23 @@ body {
   .popup__left {
     width: 33.3%;
     display: table-cell; }
+    @media (max-width: 56.25em) {
+      .popup__left {
+        display: none; } }
   .popup__right {
     width: 66.7%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 56.25em) {
+      .popup__right {
+        position: relative;
+        padding-bottom: 8rem; } }
+    .popup__right a.btn,
+    .popup__right a.btn:hover {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -10%); }
   .popup__img {
     display: block;
     width: 100%; }
