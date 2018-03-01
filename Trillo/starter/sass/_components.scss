@@ -1,0 +1,350 @@
+////////////////////////////////////////
+// LOGO
+.logo {
+}
+
+
+////////////////////////////////////////
+// SEARCH
+.search {
+   
+
+    @media only screen and (max-width: $bp-smallest) {
+        
+    }
+
+    &__input {
+       
+
+        &:focus {
+          
+        }
+
+        &::-webkit-input-placeholder {
+          
+        }
+    }
+
+    &__input:focus + &__button {
+    }
+
+    &__button {
+
+        &:focus {
+        }
+
+        &:active {
+        }
+    }
+
+    &__icon {
+      
+    }
+}
+
+
+////////////////////////////////////////
+// USER NAVIGATION
+.user-nav {
+ 
+
+    & > * {
+  
+    }
+
+    & > *:hover {
+    }
+
+    &__icon-box {
+    }
+
+    &__icon {
+       
+    }
+
+    &__notification {
+        
+    }
+
+    &__user-photo {
+     
+    }
+
+}
+
+
+////////////////////////////////////////
+// SIDE NAVIGATION
+.side-nav {
+  
+    @media only screen and (max-width: $bp-medium) {
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+
+            @media only screen and (max-width: $bp-medium) {
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+        }
+    }
+
+    &__item::before {
+      
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+    }
+
+    &__item:active::before {
+    }
+
+    &__link:link,
+    &__link:visited {
+        
+
+        @media only screen and (max-width: $bp-medium) {
+        }
+
+        @media only screen and (max-width: $bp-small) {
+        }
+    }
+
+    &__icon {
+
+        @media only screen and (max-width: $bp-small) {
+        }
+    }
+}
+
+
+////////////////////////////////////////
+// LEGAL TEXT
+.legal {
+
+    @media only screen and (max-width: $bp-medium) {
+    }
+}
+
+
+////////////////////////////////////////
+// GALLERY
+.gallery {
+
+    &__photo {
+    }
+}
+
+
+////////////////////////////////////////
+// HOTEL OVERVIEW
+.overview {
+
+    &__heading {
+
+        @media only screen and (max-width: $bp-small) {
+        }
+    }
+
+    &__stars {
+    }
+
+    &__icon-star,
+    &__icon-location {
+    }
+
+    &__location {
+    }
+
+    &__icon-location {
+    }
+
+    &__rating {
+      
+        @media only screen and (max-width: $bp-small) {
+        }
+    }
+
+    &__rating-average {
+       
+
+        @media only screen and (max-width: $bp-small) {
+        }
+    }
+
+    &__rating-count {
+        
+        @media only screen and (max-width: $bp-small) {
+        }
+    }
+}
+
+
+
+////////////////////////////////////////
+// BUTTON INLINE
+.btn-inline {
+
+    & span {
+    }
+
+    &:hover {
+
+        span {
+        }
+    }
+
+    &:focus {
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        
+    }
+
+    50% {
+      
+    }
+
+    100% {
+        
+    }
+}
+
+////////////////////////////////////////
+// PARAGRAPH
+.paragraph:not(:last-of-type) {
+}
+
+
+
+////////////////////////////////////////
+// LIST
+.list {
+  
+
+    &__item {
+        
+    }
+
+    &__item::before {
+         
+
+        // Older browsers
+
+        //Newer browsers - masks
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+          
+        }
+        
+    }
+}
+
+
+
+////////////////////////////////////////
+// RECOMMEND
+.recommend {
+   
+
+    &__count {
+    }
+
+    &__friends {
+    }
+
+    &__photo {
+
+        &:not(:last-child) {
+        }
+    }
+}
+
+
+////////////////////////////////////////
+// REVIEWS
+.review {
+    
+    @media only screen and (max-width: $bp-medium) {
+         
+    }
+
+    &__text {
+         
+    }
+
+    &__user {
+       
+    }
+
+    &__photo {
+       
+    }
+
+    &__user-box {
+    }
+
+    &__user-name {
+    
+    }
+
+    &__user-date {
+       
+    }
+
+    &__rating {
+      
+    }
+
+    &::before {
+       
+    }
+}
+
+
+////////////////////////////////////////
+// CALL TO ACTION
+.cta {
+    
+    @media only screen and (max-width: $bp-medium) {
+    }
+
+    &__book-now {
+  
+    }
+}
+
+
+////////////////////////////////////////
+// CALL TO ACTION
+.btn {
+    
+    & > * {
+      
+    }
+
+    &__visible {
+    }
+
+    &__invisible {
+        
+    }
+
+    &:hover {
+    }
+
+    &:hover &__visible {
+    }
+
+    &:hover &__invisible {
+    }
+
+    &:focus {
+       
+    }
+}
