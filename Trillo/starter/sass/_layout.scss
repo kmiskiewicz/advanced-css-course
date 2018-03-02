@@ -1,72 +1,46 @@
 .container {
-
-    max-width:120rem;
-    margin:8rem auto; //to center trick
-    background-color:var( --color-grey-light-2);
-    box-shadow: var(--shadow-dark); 
-    min-height: 50rem; 
-    @media only screen and (max-width: $bp-largest) {
-     
-        
-    }
+    max-width: 120rem;
+    margin: 8rem auto; //to center trick
+    background-color: var( --color-grey-light-2);
+    box-shadow: var(--shadow-dark);
+    min-height: 50rem;
+    @media only screen and (max-width: $bp-largest) {}
 }
 
 .header {
-
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
-
-    @media only screen and (max-width: $bp-smallest) {
- 
-    }
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: $bp-smallest) {}
 }
 
 .content {
     display: flex;
-    @media only screen and (max-width: $bp-medium) {
-    }
+    @media only screen and (max-width: $bp-medium) {}
 }
- 
+
 .sidebar {
-    background-color:var( --color-grey-dark-1);
-    flex:0 0 18%; //flex grow, flex shring, flex-basis;
-
-     
-
-
+    background-color: var( --color-grey-dark-1);
+    flex: 0 0 18%; //flex grow, flex shring, flex-basis;
 }
 
 .hotel-view {
-    background-color: #fff;
-    // background-color: pink;;
+    background-color: #fff; // background-color: pink;;
     flex: 1;
 }
 
 .detail {
-
-
-    @media only screen and (max-width: $bp-medium) {
-
-    }
-
-    @media only screen and (max-width: $bp-small) {
-
-    }
+    @media only screen and (max-width: $bp-medium) {}
+    @media only screen and (max-width: $bp-small) {}
 }
 
 .description {
-
-
-    @media only screen and (max-width: $bp-medium) {
-   
-    }
-
-    @media only screen and (max-width: $bp-small) {
-
-    }
+    @media only screen and (max-width: $bp-medium) {}
+    @media only screen and (max-width: $bp-small) {}
 }
 
-.user-reviews {
-
-}
+.user-reviews {}
