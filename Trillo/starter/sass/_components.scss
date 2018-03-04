@@ -61,7 +61,7 @@
     display: flex;
     align-items: center; //   justify-content: flex-end;
     &>* //only direct children 
-    {
+        {
         padding: 0 2rem;
         cursor: pointer;
         height: 100%;
@@ -104,14 +104,12 @@
 ////////////////////////////////////////
 // SIDE NAVIGATION
 .side-nav {
-
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
     @media only screen and (max-width: $bp-medium) {}
     &__item {
         position: relative;
-
         &:not(:last-child) {
             margin-bottom: .5rem;
             @media only screen and (max-width: $bp-medium) {}
@@ -121,33 +119,26 @@
     &__item::before {
         content: "";
         position: absolute;
-        left:0;
-        top:0;
+        left: 0;
+        top: 0;
         height: 100%;
         width: 3px;
         background-color: var(--color-primary);
         transform: scale(0);
-        transition: transform .2s,
-        width .4s cubic-bezier(1,0,0,1) .2s,
-        background-color .1s;
-        
-
+        transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s;
     }
     &__item:hover::before,
     &__item--active::before {
         transform: scale(1);
         width: 100%;
-
     }
     &__item:active::before {
         background-color: var(--color-primary-light);
-        
     }
     &__link:link,
     &__link:visited {
-            display: flex;
-            align-items: center;
-    // flex-direction: column;
+        display: flex;
+        align-items: center; // flex-direction: column;
         color: var(--color-grey-light-1);
         text-decoration: none;
         text-transform: uppercase;
@@ -179,27 +170,48 @@
 ////////////////////////////////////////
 // GALLERY
 .gallery {
-    &__photo {}
+    display: flex;
+    &__photo {
+        width: 100%;
+        display: block;
+    }
 }
 
 ////////////////////////////////////////
 // HOTEL OVERVIEW
 .overview {
+    display: flex;
+    
     &__heading {
+
         @media only screen and (max-width: $bp-small) {}
     }
-    &__stars {}
+    &__stars {
+        // flex: 1;
+        margin-right: auto;
+
+    }
     &__icon-star,
-    &__icon-location {}
-    &__location {}
-    &__icon-location {}
+    &__icon-location {
+        width: 1.75rem;
+        height:  1.75rem;
+        fill: var(--color-primary);
+    }
+    &__location {
+    }
+    &__icon-location {
+
+    }
     &__rating {
+        
         @media only screen and (max-width: $bp-small) {}
     }
     &__rating-average {
+
         @media only screen and (max-width: $bp-small) {}
     }
     &__rating-count {
+
         @media only screen and (max-width: $bp-small) {}
     }
 }
