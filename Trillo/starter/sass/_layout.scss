@@ -41,6 +41,7 @@
 .detail {
     display: flex;
     padding: 4.5rem;
+    font-size: 1.4rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
     @media only screen and (max-width: $bp-medium) {}
@@ -48,8 +49,7 @@
 }
 
 .description {
-    background: pink;
-    font-size: 1.4rem;
+    background: white;
     flex: 0 0 60%;
     margin-right: 4.5rem;
     padding: 3rem;
@@ -60,7 +60,10 @@
 
 .user-reviews {
     flex: 1;
-    background: palevioletred;
     box-shadow: var(--shadow-light);
-    
+    background-color: #F2F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

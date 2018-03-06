@@ -245,10 +245,15 @@
     background-color: transparent;
     cursor: pointer;
     transition: all .2s;
-    & span {}
+    & span {
+        margin-left: 3px; 
+        transition: margin-left .2s;
+    }
     &:hover {
         color: var(--color-grey-dark-1);
-        span {}
+        span {
+            margin-left: 8px;
+        }
     }
     &:focus {
         outline: none;
@@ -327,7 +332,6 @@
         width: 4rem;
         border-radius: 50%;
         border: 3px solid white;
-        
         &:not(:last-child) {
             margin-right: -1.5rem;
         }
@@ -337,15 +341,61 @@
 ////////////////////////////////////////
 // REVIEWS
 .review {
+    position: relative;
+    background-color: white;
+    box-shadow: var(--line);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+   
     @media only screen and (max-width: $bp-medium) {}
-    &__text {}
-    &__user {}
-    &__photo {}
-    &__user-box {}
-    &__user-name {}
-    &__user-date {}
-    &__rating {}
-    &::before {}
+    &__text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+        
+    }
+    &__user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__photo {
+        height: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+    &__user-box {
+        margin-right: auto;
+    }
+    &__user-name {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: .4rem;
+        
+    }
+    &__user-date {
+        font-size: 1rem;
+        color: var(--color-grey-dark-3);
+    }
+    &__rating {
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--color-primary)
+    }
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top:-2.4rem;
+        left:-1rem;
+        font-size: 20rem;
+        line-height: 1;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 1;
+    }
 }
 
 ////////////////////////////////////////
