@@ -1,0 +1,28 @@
+.header {
+   
+
+    @media only screen and (max-width: $bp-medium) {
+    }
+
+    @media only screen and (max-width: $bp-small) {
+    }
+
+    &__logo {
+    }
+
+    &__btn {
+    }
+
+    &__seenon-text {
+        &::before,
+        &::after {
+            content: "";
+        }
+    }
+
+    &__seenon-logos {
+
+        img {
+        }
+    }
+}
